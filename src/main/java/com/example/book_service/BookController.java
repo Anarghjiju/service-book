@@ -26,4 +26,8 @@ public class BookController {
         return br.saveAndFlush(newBook);
     }
 
+    @DeleteMapping("/books/{bid}")
+    public void deleteABook(@PathVariable("bid") Long bookId){
+        br.deleteById(bookId);
+    }
 }
